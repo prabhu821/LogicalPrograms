@@ -8,8 +8,8 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\nEnter your choice \n1.Coupon Number \n2.Day of Week \n3.Exit");
-            Console.WriteLine("\nEnter option to execute");
+            Console.WriteLine("\n\nEnter your choice \n1.Coupon Number \n2.Day of Week \n3.Fibonacci Series \n4.Exit");
+            Console.WriteLine("Enter option to execute");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -18,6 +18,12 @@ public class Program
                     break;
                 case 2:
                     DayOfWeek.DayofWeek();
+                    break;
+                case 3:
+                    FibonacciSeries series = new FibonacciSeries();
+                    Console.WriteLine("Enter number");
+                    int num=Convert.ToInt32(Console.ReadLine());
+                    series.Print(num);
                     break;
                 default:
                     flag = false;
