@@ -8,7 +8,8 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\n\nEnter your choice \n1.Coupon Number \n2.Day of Week \n3.Fibonacci Series \n4.Perfect Number \n5.Exit");
+            Console.WriteLine("\n\nEnter your choice \n1.Coupon Number \n2.Day of Week \n3.Fibonacci Series \n4.Perfect Number" +
+                " \n5.Prime Number \n6.Exit");
             Console.WriteLine("Enter option to execute");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -30,6 +31,12 @@ public class Program
                     Console.WriteLine("Enter number");
                     int n = Convert.ToInt32(Console.ReadLine());
                     perfectNumber.Check(n);
+                    break;
+                case 5:
+                    PrimeNumber primeNumber = new PrimeNumber();
+                    Console.WriteLine("Enter number");
+                    int primeNum = Convert.ToInt32(Console.ReadLine());
+                    primeNumber.CheckPrime(primeNum);
                     break;
                 default:
                     flag = false;
