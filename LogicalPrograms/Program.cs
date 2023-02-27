@@ -9,7 +9,7 @@ public class Program
         while (flag)
         {
             Console.WriteLine("\n\nEnter your choice \n1.Coupon Number \n2.Day of Week \n3.Fibonacci Series \n4.Perfect Number" +
-                " \n5.Prime Number \n6.Reverse Number \n7.Exit");
+                " \n5.Prime Number \n6.Reverse Number \n7.Stop Watch \n8.Exit");
             Console.WriteLine("Enter option to execute");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -43,6 +43,10 @@ public class Program
                     Console.WriteLine("Enter number");
                     int reverseNum = Convert.ToInt32(Console.ReadLine());
                     reverseNumber.Reverse(reverseNum);
+                    break;
+                case 7:
+                    StopWatch stopWatch = new StopWatch();
+                    stopWatch.Start();
                     break;
                 default:
                     flag = false;
